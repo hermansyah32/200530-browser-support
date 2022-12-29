@@ -1,0 +1,369 @@
+@font-face {
+  font-family: OpenSans;
+  src: url(../fonts/opensans/OpenSans-Regular.ttf);
+}
+
+@font-face {
+  font-family: OpenSans;
+  font-style: italic;
+  src: url(../fonts/opensans/OpenSans-Italic.ttf);
+}
+
+@font-face {
+  font-family: OpenSans;
+  font-weight: bold;
+  src: url(../fonts/opensans/OpenSans-Bold.ttf);
+}
+
+@font-face {
+  font-family: OpenSans;
+  font-weight: bold;
+  font-style: italic;
+  src: url(../fonts/opensans/OpenSans-BoldItalic.ttf);
+}
+
+@font-face {
+  font-family: OpenSans;
+  font-weight: lighter;
+  src: url(../fonts/opensans/OpenSans-Light.ttf);
+}
+
+@font-face {
+  font-family: OpenSans;
+  font-weight: lighter;
+  font-style: italic;
+  src: url(../fonts/opensans/OpenSans-LightItalic.ttf);
+}
+
+@font-face {
+  font-family: OpenSans;
+  font-weight: 900;
+  src: url(../fonts/opensans/OpenSans-ExtraBold.ttf);
+}
+
+@font-face {
+  font-family: OpenSans;
+  font-weight: 900;
+  font-style: italic;
+  src: url(../fonts/opensans/OpenSans-ExtraBoldItalic.ttf);
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  grid-template-columns: repeat(9, minmax(0, 1fr));
+  font-family: OpenSans;
+  background-image: url(../assets/background.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+/* General Component */
+.btn {
+  cursor: pointer;
+  border: 2px solid white;
+}
+
+.btn-secondary {
+  background-color: rgba(119, 119, 119);
+  padding: 0.5rem;
+  font-family: OpenSans;
+  font-size: 1rem;
+  text-align: center;
+  color: white;
+  font-weight: 500;
+}
+
+.btn-secondary:hover {
+  background-color: rgb(146, 146, 146);
+}
+
+.btn-primary {
+  background-color: rgba(119, 119, 119, 0.5);
+  padding-left: 0.7rem;
+  padding-right: 0.7rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-family: OpenSans;
+  font-size: 0.8rem;
+  text-align: center;
+  color: white;
+  font-weight: 500;
+  margin-top: 1.5rem;
+}
+
+.btn-primary:hover {
+  background-color: rgb(119, 119, 119);
+}
+
+/* SVG Fill Color Inverted (change to white) */
+.invert-color {
+  filter: invert(100%);
+}
+
+/* Notification Section */
+.notification {
+  display: grid;
+  width: 100%;
+  background-color: #777777;
+  grid-template-columns: repeat(9, minmax(0, 1fr));
+  grid-column: 1 / span 9;
+  row-gap: 1rem;
+  align-content: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  position: absolute;
+  top: 20%;
+  color: white;
+}
+
+.notification-header {
+  display: flex;
+  width: 100%;
+  grid-column: 3 / span 4;
+  font-size: 1.7rem;
+  align-items: center;
+}
+
+.notification-header img {
+  height: 2rem;
+  margin-right: 1rem;
+}
+
+.notification label {
+  word-wrap: break-word;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.notification-body {
+  grid-row: 2;
+  grid-column: 3 / span 4;
+}
+
+.notification-body p {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.notification-footer {
+  grid-row: 3;
+  grid-column: 3 / span 4;
+}
+
+/* Main Section */
+main {
+  display: grid;
+}
+
+.browser {
+  display: grid;
+  grid-template-columns: repeat(9, minmax(0, 1fr));
+}
+
+.section {
+  display: flex;
+  height: 100vh;
+  justify-items: center;
+}
+
+.section.first {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-column: 1 / span 3;
+}
+
+.section.last {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-column: 7 / span 3;
+}
+
+.section .item {
+  display: flex;
+  width: 100%;
+  padding: 1rem;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  text-align: center;
+}
+
+.section .item.on-right {
+  grid-column: 3;
+}
+
+.section .item.on-left {
+  grid-column: 1;
+}
+
+.bg-yellow {
+  background-color: rgba(235, 187, 74, 0.77);
+}
+
+.bg-orange {
+  background-color: rgb(232, 160, 62, 0.77);
+}
+
+.bg-light-blue {
+  background-color: rgb(90, 198, 250, 0.77);
+}
+
+.bg-dark-blue {
+  background-color: rgb(69, 156, 227, 0.77);
+}
+
+.bg-red {
+  background-color: rgb(227, 99, 77, 0.77);
+}
+
+.item img {
+  width: 6rem;
+  margin-bottom: 2rem;
+}
+
+.item .description {
+  text-align: center;
+  font-size: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.item .description strong {
+  text-transform: uppercase;
+}
+
+.btn-primary img {
+  display: none;
+}
+
+@media screen and (max-height: 840px) {
+  .notification{
+    top: 15%;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  body {
+    background-size: cover !important;
+    overflow: hidden !important;
+  }
+
+  main {
+    overflow-y: scroll;
+    height: 100vh;
+  }
+
+  .notification {
+    display: block;
+    padding: 1rem;
+    top: 0 !important;
+    position: relative;
+  }
+
+  .notification-header {
+    margin-bottom: 1rem;
+  }
+
+  .notification-header img {
+    height: 2.5rem;
+  }
+
+  .notification label {
+    word-wrap: break-word;
+    text-align: justify;
+    text-justify: inter-word;
+    font-size: large;
+  }
+
+  .notification-body {
+    grid-column: 1;
+  }
+
+  .notification-footer {
+    display: none;
+  }
+
+  main {
+    display: grid;
+    background-size: 160%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+  }
+
+  .browser {
+    width: 100%;
+    display: block;
+  }
+
+  .section {
+    justify-items: center;
+    height: auto !important;
+    padding: 1rem;
+  }
+
+  .section.first {
+    display: block !important;
+  }
+
+  .section.last {
+    display: block !important;
+  }
+
+  .section .item {
+    display: grid;
+    padding: 0;
+    grid-template-columns: auto 1fr auto;
+    column-gap: 1rem;
+  }
+
+  .item img {
+    width: 3rem;
+    margin-bottom: 0;
+  }
+
+  .item .description {
+    text-align: left;
+    font-size: 1rem;
+  }
+
+  .btn-primary {
+    background-color: transparent;
+    border: 0;
+    margin-top: 0;
+    padding: 0;
+  }
+
+  .btn-primary img {
+    display: block;
+  }
+
+  .btn-primary span {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1245px) {
+  .item .description {
+    height: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 1165px) {
+  .notification-header {
+    font-size: 1.2rem;
+  }
+
+  .item img {
+    width: 4rem;
+  }
+}
